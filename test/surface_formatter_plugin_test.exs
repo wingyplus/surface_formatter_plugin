@@ -23,18 +23,18 @@ defmodule SurfaceFormatterPluginTest do
       Mix.Tasks.Format.run([])
 
       assert File.read!("a.ex") == """
-      defmodule A do
-        use Surface.Component
+             defmodule A do
+               use Surface.Component
 
-        def render(assigns) do
-          ~F"<div>\n</div>\n"
-        end
-      end
-      """
+               def render(assigns) do
+                 ~F"<div>\n</div>\n"
+               end
+             end
+             """
     end)
   end
 
-    test "format/2 - format .sface file extension" do
+  test "format/2 - format .sface file extension" do
     in_tmp(fn ->
       File.write!(".formatter.exs", """
       [
@@ -51,12 +51,11 @@ defmodule SurfaceFormatterPluginTest do
       Mix.Tasks.Format.run([])
 
       assert File.read!("a.sface") == """
-      <div>
-      </div>
-      """
+             <div>
+             </div>
+             """
     end)
   end
-
 
   defp in_tmp(fun) do
     dir = "./test_tmp"
