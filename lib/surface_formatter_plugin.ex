@@ -1,6 +1,20 @@
 defmodule SurfaceFormatterPlugin do
   @moduledoc """
-  A surface formatter mix format plugin.
+  A surface formatter for mix format plugin.
+
+  ## Usage
+
+  Add `SurfaceFormatterPlugin` to the `:plugins` in `.formatter.exs`:
+
+  ```
+  [
+    plugins: [SurfaceFormatterPlugin]
+    # ...
+  ]
+  ```
+
+  And then when you run `mix format`, it'll format surface both `~F` and
+  `.sface` file automatically.
   """
 
   @behaviour Mix.Tasks.Format
