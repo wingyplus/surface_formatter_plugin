@@ -7,7 +7,14 @@ defmodule SurfaceFormatterPlugin.MixProject do
       version: "0.1.0",
       elixir: "~> 1.13-dev",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      name: "SurfaceFormatterPlugin",
+      source_url: "https://github.com/wingyplus/surface_formatter_plugin",
+      homepage_url: "https://github.com/wingyplus/surface_formatter_plugin",
+      docs: [
+        main: "SurfaceFormatterPlugin",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -19,7 +26,8 @@ defmodule SurfaceFormatterPlugin.MixProject do
 
   defp deps do
     [
-      {:surface_formatter, "~> 0.5"}
+      {:surface_formatter, "~> 0.5"},
+      {:ex_doc, "~> 0.24", only: :dev, runtime: false}
     ]
   end
 end
