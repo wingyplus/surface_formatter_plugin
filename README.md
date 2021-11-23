@@ -1,5 +1,7 @@
 # SurfaceFormatterPlugin
 
+**ARCHIVED**: `surface_formatter` now support formatter plugin in version 0.7.0. See [here](https://github.com/surface-ui/surface_formatter/commit/4d6d2eb09d27ff82d87cae5dc3b4167a188aaa7e) for more details.
+
 A surface formatter plugin for `mix format`
 
 ## NOTE
